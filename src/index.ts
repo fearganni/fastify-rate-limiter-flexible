@@ -1,8 +1,10 @@
-import { FastifyInstance, FastifyRequest, FastifyReply, HookHandlerDoneFunction } from "fastify";
 import fp from "fastify-plugin";
-import { RateLimiterRedis, RateLimiterMemory, IRateLimiterStoreOptions, RateLimiterRes } from "rate-limiter-flexible";
 import Redis from "ioredis";
-import { ApplicationHook, LifecycleHook } from "fastify/types/hooks";
+import { FastifyInstance, FastifyRequest, FastifyReply, HookHandlerDoneFunction } from "fastify";
+import { RateLimiterRedis, RateLimiterMemory, IRateLimiterStoreOptions, RateLimiterRes } from "rate-limiter-flexible";
+
+// Add in our hooks for fastify
+import { ApplicationHook, LifecycleHook, preHandlerAsyncHookHandler } from "fastify/types/hooks";
 
 interface RateLimiterOptions {
 	redis?: Redis;
