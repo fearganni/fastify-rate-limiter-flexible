@@ -1,6 +1,6 @@
 {
 	"name": "fastify-rate-limiter-flexible",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A Fastify plugin for rate limiting using rate-limiter-flexible.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
